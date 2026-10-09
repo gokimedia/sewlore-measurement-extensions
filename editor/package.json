@@ -7,6 +7,8 @@
   "author": "Sewlore",
   "license": "MIT",
   "homepage": "https://sewlore.com/pages/fabric-measurement-methods-guide",
+  "repository": { "type": "git", "url": "https://github.com/gokimedia/sewlore-measurement-extensions.git", "directory": "editor" },
+  "bugs": { "url": "https://github.com/gokimedia/sewlore-measurement-extensions/issues" },
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Linters", "Other"],
   "keywords": ["csv", "measurement", "fabric", "sewing", "validation"],

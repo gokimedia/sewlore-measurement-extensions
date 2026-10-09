@@ -48,6 +48,12 @@ Validation runs locally in the extension host on the active editor buffer. The e
 
 Read the [Sewlore measurement methods guide](https://sewlore.com/pages/fabric-measurement-methods-guide) for recording units, assumptions and procedure. The [Sewlore Measurement Reference](https://sewlore.gitbook.io/sewlore-docs) explains signed changes, numeric domains and choosing a tool. [Sewlore](https://sewlore.com/) publishes sewing measurement resources.
 
+## Source and support
+
+The [public editor source](https://github.com/gokimedia/sewlore-measurement-extensions/tree/main/editor) is available in Sewlore's measurement extensions repository. Report reproducible problems through the [public issue tracker](https://github.com/gokimedia/sewlore-measurement-extensions/issues), using an invented minimal CSV and removing personal or confidential notes.
+
+Source publication is complete; marketplace submission remains pending. The package still uses the unconfirmed publisher candidate `gokimedia`; this is not a claim of store ownership or approval.
+
 ## Development
 
 This extension contains plain CommonJS JavaScript and has no runtime package dependencies. Run `npm test` for parser and validation tests. Packaging uses the official `@vscode/vsce` tool. Marketplace publishing is a separate step that requires a confirmed publisher account.

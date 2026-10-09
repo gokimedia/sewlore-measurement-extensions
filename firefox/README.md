@@ -20,6 +20,12 @@ Software and the original geometric SVG icon are MIT licensed (see `extension/LI
 
 There is no bundle, minification, remote code or dependency in the extension runtime. All shipped JavaScript is directly reviewable. Node test dependencies, when present, are developer-only and excluded from the upload ZIP.
 
+## Public source, support and privacy
+
+The [Firefox source directory](https://github.com/gokimedia/sewlore-measurement-extensions/tree/main/firefox) is public. Report software problems in the [project issue tracker](https://github.com/gokimedia/sewlore-measurement-extensions/issues). The [plain-language privacy statement](https://github.com/gokimedia/sewlore-measurement-extensions/blob/main/firefox/PRIVACY.md) is publicly readable. These addresses were verified against source commit `86ada8b940aeceb796ebea99d723daafd7ca957f`; store acceptance of the GitHub privacy-page format remains a publisher check.
+
+The public repository documents a submission candidate. Its existence does not establish Firefox signing, marketplace approval or native host testing. The extension's homepage remains the Sewlore measurement methods guide.
+
 ## Reproduce checks and packaging
 
 1. Run `npm ci` to install the pinned developer-only DOM test and lint tools (Node 20 or newer).
