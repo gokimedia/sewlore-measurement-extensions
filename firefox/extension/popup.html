@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sewlore Measurement Check</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">SEWLORE · OFFLINE TOOLS</p>
+    <h1>Measurement Check</h1>
+    <p>Convert a length or compare the two axes of a printed test square.</p>
+  </header>
+  <main>
+    <p class="privacy">No account or data transmission. Entries clear when this popup closes; export a CSV to keep a record.</p>
+    <nav class="tool-tabs" aria-label="Measurement tools">
+      <button id="show-convert" type="button" aria-pressed="true" aria-controls="convert-section">Length converter</button>
+      <button id="show-print" type="button" aria-pressed="false" aria-controls="print-section">Print square</button>
+    </nav>
+
+    <section id="convert-section" aria-labelledby="convert-heading">
+      <h2 id="convert-heading">Length converter</h2>
+      <form id="conversion-form">
+        <label for="conversion-label">Record label <span>(optional)</span></label>
+        <input id="conversion-label" name="label" type="text" maxlength="120" autocomplete="off">
+        <div class="field-pair">
+          <div><label for="length">Length</label><input id="length" name="length" type="text" inputmode="decimal" required autocomplete="off" aria-describedby="conversion-hint"></div>
+          <div><label for="from-unit">Entered unit</label><select id="from-unit" name="unit"><option value="mm">mm</option><option value="cm">cm</option><option value="in">in</option></select></div>
+        </div>
+        <p id="conversion-hint" class="hint">Use a non-negative decimal with a dot; scientific notation is accepted. 1 inch = 25.4 mm exactly.</p>
+        <button type="submit" class="primary">Convert length</button>
+      </form>
+      <p id="conversion-error" role="alert" class="error" hidden></p>
+      <div id="conversion-output" class="result" aria-live="polite" hidden></div>
+      <button id="export-conversion" type="button" class="secondary" disabled>Export conversion CSV</button>
+    </section>
+
+    <section id="print-section" aria-labelledby="print-heading" hidden>
+      <h2 id="print-heading">Check a printed square</h2>
+      <p class="hint">Measure the printed width and height yourself. All three lengths must use the selected unit.</p>
+      <form id="print-form">
+        <label for="print-label">Record label <span>(optional)</span></label>
+        <input id="print-label" name="label" type="text" maxlength="120" autocomplete="off">
+        <div class="field-pair">
+          <div><label for="print-unit">Common length unit</label><select id="print-unit" name="unit"><option value="mm">mm</option><option value="cm">cm</option><option value="in">in</option></select></div>
+          <div><label for="target">Target side</label><input id="target" name="target" type="text" inputmode="decimal" required autocomplete="off"></div>
+        </div>
+        <div class="field-pair">
+          <div><label for="measured-x">Measured X (width)</label><input id="measured-x" name="x" type="text" inputmode="decimal" required autocomplete="off"></div>
+          <div><label for="measured-y">Measured Y (height)</label><input id="measured-y" name="y" type="text" inputmode="decimal" required autocomplete="off"></div>
+        </div>
+        <label for="threshold">Chosen threshold</label>
+        <input id="threshold" name="threshold" type="text" inputmode="decimal" value="0.5" required autocomplete="off" aria-describedby="threshold-hint">
+        <p id="threshold-hint" class="hint">This number is used as percent for each axis and as percentage points for the axis gap. The initial 0.5 is a working preference, not a fabric or printer standard.</p>
+        <button type="submit" class="primary">Check measurements</button>
+      </form>
+      <p id="print-error" role="alert" class="error" hidden></p>
+      <div id="print-output" class="result" aria-live="polite" hidden></div>
+      <button id="export-print" type="button" class="secondary" disabled>Export print-check CSV</button>
+    </section>
+
+    <details>
+      <summary>How to interpret these calculations</summary>
+      <p>Axis error = (measured − target) ÷ target × 100. A minus sign means smaller than the target. Axis gap is the absolute difference between the signed X and Y errors.</p>
+      <p>The two flags answer separate questions. Both axes can be within the chosen threshold while their gap exceeds it. Equal undersized axes can have a zero gap and still fail the axis threshold.</p>
+      <p>No input is a physical test supplied by Sewlore. This tool does not assess fabric quality, compliance, fit or measurement uncertainty. It does not recommend one printer correction for unequal axes.</p>
+      <p>Results use JavaScript floating-point arithmetic and up to nine significant figures on screen. CSV keeps the available numeric precision. Extremely large or underflowing conversions are rejected; small rounding differences remain possible.</p>
+    </details>
+  </main>
+  <footer>
+    <a href="https://sewlore.com/pages/fabric-measurement-methods-guide" target="_blank" rel="noopener noreferrer">Sewlore measurement methods guide ↗</a>
+    <a href="privacy.html" target="_blank" rel="noopener">Privacy and data handling</a>
+    <p>Documentation links open only when clicked. Calculations work without visiting a website.</p>
+  </footer>
+</body>
+</html>

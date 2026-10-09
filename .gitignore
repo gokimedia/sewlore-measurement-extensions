@@ -1,0 +1,21 @@
+# Developer installations and caches
+node_modules/
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Locally built distribution packages and receipts
+*.zip
+*.vsix
+*.xpi
+*.private.*
+firefox/build-manifest.json
+qa/
+
+# Local credentials and environment files
+.env
+.env.*
+*.pem
+*.key

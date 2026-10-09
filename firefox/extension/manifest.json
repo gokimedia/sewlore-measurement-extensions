@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Sewlore Measurement Check",
+  "version": "0.1.0",
+  "description": "Convert cm, mm and inches and check the two axes of a printed test square. Offline calculations with optional CSV export.",
+  "author": "Sewlore",
+  "homepage_url": "https://sewlore.com/pages/fabric-measurement-methods-guide",
+  "icons": { "48": "icons/measurement.svg", "96": "icons/measurement.svg" },
+  "action": {
+    "default_title": "Sewlore Measurement Check",
+    "default_popup": "popup.html",
+    "default_icon": { "32": "icons/measurement.svg" }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "measurement-check@sewlore.com",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"
+  }
+}

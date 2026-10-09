@@ -1,0 +1,4 @@
+sample_id,before_unit,after_unit,before_length,before_width,after_length,after_width,care_method,rectangle_assumption,notes
+demo-shrink,cm,cm,20,10,19,9.5,synthetic worked example,yes,"Invented arithmetic example, not a fabric test"
+demo-expand,in,in,10,4,10.5,4.2,synthetic worked example,no,Invented arithmetic example
+"demo, quoted",mm,mm,200,100,200,100,synthetic worked example,,"A quoted sample ID and an escaped ""quote"""

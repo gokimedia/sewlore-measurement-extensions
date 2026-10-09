@@ -1,0 +1,6 @@
+sample_id,before_unit,after_unit,before_length,before_width,after_length,after_width,care_method,rectangle_assumption,notes
+mixed-units,cm,mm,20,10,190,95,synthetic example,yes,Convert both readings to the same unit first
+zero-reading,cm,cm,20,0,19,9.5,synthetic example,yes,Before width is zero
+ambiguous-unit,inch,in,10,4,9.5,3.8,synthetic example,no,Use the supported spelling in
+not-a-number,mm,mm,200,100,NaN,95,synthetic example,no,Re-enter the actual reading
+text-in-number,cm,cm,20 cm,10,19,9.5,synthetic example,no,Keep unit text in unit columns

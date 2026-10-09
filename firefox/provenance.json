@@ -1,0 +1,24 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Sewlore",
+  "adapted_source": {
+    "workspace_relative_path": "outputs/backlink-rollout-2026-10-05/sewlore-sewing-tools/calculations.js",
+    "sha256": "8b64eb70d683574dda93aa2eb68c268177d60e6f7a3c857ac79ae718cee5044e",
+    "public_repository": "https://github.com/gokimedia/sewlore-sewing-tools",
+    "reused_policy": "Print-scale arithmetic and two separate flags; CSV quoting and apostrophe neutralisation policy",
+    "source_modified": false
+  },
+  "license_source_sha256": "bb39e481b111b09f9d28374d85fc48f454a5e742bb5f9fa0974d655d355c9959",
+  "new_work": [
+    "Manifest V3 offline Firefox popup and accessible form handlers",
+    "mm/cm/in conversion with ratio-first numeric range handling",
+    "Decimal input parser and representability checks",
+    "User-initiated calculation snapshots and CSV records",
+    "Original geometric measurement icon",
+    "Privacy disclosures, documentation and reviewer notes"
+  ],
+  "physical_measurements_claimed": false,
+  "signed_or_published": false,
+  "account_username_known": false
+}
