@@ -1,11 +1,11 @@
 # Sewlore Measurement Extensions
 
-Two independent, locally running tools for recording sewing measurements. Both are version 0.1.0 source packages; **marketplace submission pending**. This repository does not claim an approved Firefox add-on, a public editor-store listing or verified publisher ownership.
+Two independent, locally running tools for recording sewing measurements. The [VS Code editor extension](https://marketplace.visualstudio.com/items?itemName=gokimedia.sewlore-measurement-record-checker) is published in Visual Studio Marketplace. The Firefox 0.1.0 package has been submitted to AMO; **signing, publication and review remain pending**.
 
 | Tool | Purpose | Source | Current checks |
 | --- | --- | --- | --- |
-| Firefox: Sewlore Measurement Check | Convert mm/cm/in, compare both axes of a print square, and export a requested CSV record | [Firefox source and instructions](firefox/README.md) | Numeric, equivalence, manifest and DOM-handler tests; native Firefox installation/download review and AMO submission remain pending |
-| VS Code: Sewlore Measurement Record Checker | Diagnose invalid fabric-care CSV fields in the active editor and summarize signed dimensional changes | [Editor source and instructions](editor/README.md) | Parser tests and an isolated desktop VS Code 1.139.0 Extension Host check; store submission remains pending |
+| Firefox: Sewlore Measurement Check | Convert mm/cm/in, compare both axes of a print square, and export a requested CSV record | [Firefox source and instructions](firefox/README.md) | Numeric, equivalence, manifest and DOM-handler tests; submitted to AMO, with signing/publication/review pending; native Firefox installation/download checks not yet completed |
+| VS Code: Sewlore Measurement Record Checker | Diagnose invalid fabric-care CSV fields in the active editor and summarize signed dimensional changes | [Editor source and instructions](editor/README.md) | Parser tests and an isolated desktop VS Code 1.139.0 Extension Host check; [published in Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=gokimedia.sewlore-measurement-record-checker); Open VSX submission pending |
 
 ## Choose the tool
 
@@ -45,9 +45,9 @@ npm test
 npm exec --ignore-scripts --yes --package=@vscode/vsce@4.0.0 -- vsce package --no-dependencies --allow-missing-repository
 ```
 
-Packaging creates a local VSIX; that command does not publish it. The editor manifest currently carries the unconfirmed publisher candidate `gokimedia`. Confirm the real publisher before a store submission and rebuild if it changes. The declared minimum editor version has not been separately executed; the actual integration check used VS Code 1.139.0.
+Packaging creates a local VSIX; that command does not publish it. The editor extension is published under Visual Studio Marketplace publisher ID `gokimedia` (Sewlore). Open VSX publication is pending. The declared minimum editor version has not been separately executed; the actual integration check used VS Code 1.139.0.
 
-Firefox requires native browser review, publisher authentication and Mozilla validation/signing/review. Editor marketplaces require their own publisher identity and publication process. No credential, private receipt, installed dependency, binary package or editor profile is included in this source repository.
+The Firefox AMO submission awaits signing, publication and review; native Firefox installation/download checks remain pending. Editor marketplaces require their own publisher identity and publication process. No credential, private receipt, installed dependency, binary package or editor profile is included in this source repository.
 
 ## Support and licensing
 

@@ -2,7 +2,7 @@
   "name": "sewlore-measurement-record-checker",
   "displayName": "Sewlore Measurement Record Checker",
   "description": "Check fabric-care CSV measurements locally, with field diagnostics and signed dimensional changes.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "gokimedia",
   "author": "Sewlore",
   "license": "MIT",

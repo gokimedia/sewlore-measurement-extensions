@@ -52,7 +52,7 @@ Read the [Sewlore measurement methods guide](https://sewlore.com/pages/fabric-me
 
 The [public editor source](https://github.com/gokimedia/sewlore-measurement-extensions/tree/main/editor) is available in Sewlore's measurement extensions repository. Report reproducible problems through the [public issue tracker](https://github.com/gokimedia/sewlore-measurement-extensions/issues), using an invented minimal CSV and removing personal or confidential notes.
 
-Source publication is complete; marketplace submission remains pending. The package still uses the unconfirmed publisher candidate `gokimedia`; this is not a claim of store ownership or approval.
+The [published VS Code extension](https://marketplace.visualstudio.com/items?itemName=gokimedia.sewlore-measurement-record-checker) is available in Visual Studio Marketplace under publisher ID `gokimedia` (Sewlore). Open VSX submission remains pending.
 
 ## Development
 
